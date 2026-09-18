@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ms"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260918-05-13efa67","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YACgEZulLoA,0","Arial Narrow":"YAGyDvJ_4Ts,0","Arial Rounded MT Bold":"YAFcfoaHu-s,0","Arial":"YAGyDvJ_4Ts,0","Avenir Next":"YAFcfmNq6UY,0","Baloo 2":"YADK30bC6HQ,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAFcfvtOAUY,1","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHQutsX00Q,0","Hanken Grotesk":"YAFcfhwp99E,0","Helvetica Neue":"YAFcf6CtJfI,0","Helvetica":"YAFcf6CtJfI,0","IBM Plex Mono":"YAFdJkmvhGI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YADK3zbC6RM,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Pacifico":"YADLjORQ1u4,0","Phantom Sans":"YAFdJvgJ5TU,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAGvf3_u0_Q,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Source Serif 4":"YACgEfdj394,0","Space Grotesk":"YADZ-dYEmhg,0","Space Mono":"YADW1-vpsoc,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","UV Display":"YAEdVfSSpYo,0","UV Sans":"YAFdJvgJ5TU,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YAD1aFjegN8,0","ui-sans-serif":"YACkoD1yZN0,0"}}');</script><script src="/_sdk/83d6dfdadcd4750a.telemetry_sdk.js" integrity="sha512-XS4Dvzp6vbagZS9vFErihvr8aO3S0tH78KWUefn06fmL4WYqryBtZj/IOLITYj7dFA4gPVvPg1W/JB1DK3uLNQ=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembelajaran Huruf Jawi</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #173b35;
+      --cream: #fffaf0;
+      --emerald: #0e6b57;
+      --gold: #c68b2d;
+      --paper: #fffdf8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      background-color: var(--cream);
+    }
+
+    .app-shell {
+      width: 100%;
+      min-height: calc(100 * min(var(--vh, 1vh), 1vh));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pattern-layer {
+      position: absolute;
+      inset: 0;
+      opacity: 0.42;
+      pointer-events: none;
+      background-image:
+        linear-gradient(30deg, rgba(14, 107, 87, 0.055) 12%, transparent 12.5%, transparent 87%, rgba(14, 107, 87, 0.055) 87.5%, rgba(14, 107, 87, 0.055)),
+        linear-gradient(150deg, rgba(14, 107, 87, 0.055) 12%, transparent 12.5%, transparent 87%, rgba(14, 107, 87, 0.055) 87.5%, rgba(14, 107, 87, 0.055));
+      background-size: 52px 90px;
+    }
+
+    .display-font { font-family: "Fraunces", serif; }
+
+    .page-view {
+      display: none;
+      position: relative;
+      z-index: 1;
+      animation: reveal 0.38s ease-out;
+    }
+
+    .page-view.is-active { display: block; }
+
+    .nav-card {
+      border: 1px solid rgba(23, 59, 53, 0.09);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .nav-card:hover,
+    .nav-card:focus-visible {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 34px rgba(18, 70, 58, 0.16);
+    }
+
+    .nav-card:focus-visible,
+    .back-button:focus-visible,
+    .answer-button:focus-visible,
+    .retry-button:focus-visible {
+      outline: 3px solid #c68b2d;
+      outline-offset: 3px;
+    }
+
+    .card-icon {
+      width: 3.25rem;
+      height: 3.25rem;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+    }
+
+    .arabic {
+      font-family: "Times New Roman", serif;
+      direction: rtl;
+      line-height: 1;
+    }
+
+    .pyramid-row {
+      display: flex;
+      justify-content: center;
+      gap: clamp(0.45rem, 1.8vw, 1rem);
+      margin-bottom: 0.85rem;
+    }
+
+    .letter-tile {
+      display: grid;
+      width: clamp(2.7rem, 7vw, 4.8rem);
+      height: clamp(2.7rem, 7vw, 4.8rem);
+      place-items: center;
+      border-radius: 15px;
+      background: #fffdf8;
+      border: 1px solid rgba(198, 139, 45, 0.28);
+      box-shadow: 0 7px 17px rgba(23, 59, 53, 0.08);
+      color: #0e6b57;
+      font-size: clamp(1.65rem, 4vw, 2.55rem);
+      font-weight: bold;
+    }
+
+    .note-row {
+      display: grid;
+      grid-template-columns: minmax(80px, 0.85fr) 1.2fr 1fr 1fr 1fr;
+      gap: 0.65rem;
+      align-items: center;
+      padding: 1rem;
+      border-bottom: 1px solid rgba(23, 59, 53, 0.09);
+    }
+
+    .note-row:last-child { border-bottom: 0; }
+
+    .answer-button {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      border-radius: 0.9rem;
+      border: 1px solid #d9e5dd;
+      background: #fffdf8;
+      color: #173b35;
+      font-weight: 700;
+      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+    }
+
+    .answer-button:hover { transform: translateY(-2px); border-color: #0e6b57; }
+    .answer-button.is-correct { background: #dcefe6; border-color: #0e6b57; color: #07523f; }
+    .answer-button.is-wrong { background: #f9e0db; border-color: #bd4f37; color: #91331f; }
+
+    .status-message { min-height: 1.6rem; }
+
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 640px) {
+      .note-row {
+        grid-template-columns: 1fr 1fr;
+        padding: 0.9rem;
+      }
+
+      .note-row .note-label { grid-column: 1 / -1; }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/8de366929c5f3b48.data_sdk.js" type="text/javascript" integrity="sha512-TyQ8k8cZj66xe/aENmn6RyZpdOFZXbAo5+KBG3PeFM+Q4qMTHU8xAqmq4ADClNfPrstgQYV6OzZHwLTnElzB2g=="></script>
+  <script src="/_sdk/0ddbbee1c66b1212.editing_sdk.js" type="text/javascript" integrity="sha512-HQn5LM1yruQSbY78ATUril6QeOJ9xj7KqO64ltLtb4vBwI5Qv3/tloFFOndBPZTNZoeV5xKzuth5y6FTi9crsg=="></script>
+  <script src="/_sdk/765e1fea0cec97ce.resizing_sdk.js" type="text/javascript" integrity="sha512-IRTJnqww0+HQ5V/LlWEQrlD5SrYHaVvaeVoNe8HYQXoaguzUGheSd9+n9s6WOgaTcEH0g37DuINHZ9aqfzWjlw=="></script>
+ </head>
+ <body data-template-id="__page-root" style="background: linear-gradient(135deg, rgb(248, 241, 223), rgb(228, 240, 232));">
+  <div class="app-shell">
+   <div class="pattern-layer"></div>
+   <header class="relative z-10 w-full px-5 pt-5 sm:px-8">
+    <div class="mx-auto flex max-w-6xl items-center justify-between rounded-2xl border border-white/60 bg-white/75 px-5 py-3 shadow-sm backdrop-blur"><button id="brand-home" type="button" class="flex items-center gap-3 text-left" aria-label="Kembali ke halaman utama"> <span class="grid h-10 w-10 place-items-center rounded-xl bg-emerald-700 text-amber-100"> <i data-lucide="languages" width="21" height="21"></i> </span> <span data-template-id="brand-name" class="canva-text font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 17px;">Jawi Ceria</span> </button> <button id="back-button" type="button" data-template-id="back-button" class="back-button canva-button hidden items-center gap-2 rounded-xl px-4 py-2 text-sm font-bold transition hover:brightness-95" style="background: rgb(14, 107, 87); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Kembali</button>
+    </div>
+   </header>
+   <main class="relative z-10 w-full px-5 pb-10 pt-7 sm:px-8">
+    <section id="home-view" class="page-view is-active" aria-labelledby="home-title">
+     <div class="mx-auto max-w-6xl">
+      <div class="grid items-center gap-8 rounded-[2rem] border border-white/70 bg-white/65 p-6 shadow-xl shadow-emerald-950/5 backdrop-blur-sm md:grid-cols-[1.25fr_0.75fr] md:p-10">
+       <div>
+        <p data-template-id="hero-eyebrow" class="canva-text mb-3 font-bold uppercase tracking-[0.18em]" style="color: rgb(166, 107, 22); font-weight: 700; font-style: normal; font-size: 13px;">Belajar dengan santai</p>
+        <h1 id="home-title" data-template-id="home-title" class="canva-text display-font mb-4 font-bold leading-tight" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 32px;">Jom Kenali Huruf Jawi</h1>
+        <p data-template-id="home-description" class="canva-text max-w-xl leading-7" style="color: rgb(66, 99, 91); font-weight: 400; font-style: normal; font-size: 17px;">Terokai asas huruf Jawi melalui nota ringkas, piramid huruf dan permainan interaktif yang menyeronokkan.</p>
+        <div class="mt-6 flex items-center gap-3 text-sm font-semibold text-emerald-800"><span class="h-px w-9 bg-amber-600"></span> <span data-template-id="hero-note" class="canva-text" style="color: rgb(14, 107, 87); font-weight: 600; font-style: normal; font-size: 16px;">Satu langkah kecil, satu huruf pada satu masa</span>
+        </div>
+       </div>
+       <div class="relative mx-auto w-full max-w-sm">
+        <div class="absolute -inset-3 rounded-[2rem] border border-amber-500/30"></div><img data-template-id="hero-image" loading="lazy" class="canva-image relative h-64 w-full rounded-[1.6rem] object-cover shadow-lg md:h-72" src="https://images.pexels.com/photos/19697783/pexels-photo-19697783.jpeg" alt="Siling Islam yang indah dengan kaligrafi Arab dan corak geometri berwarna-warni.">
+        <div data-template-id="image-caption" class="canva-banner absolute -bottom-4 -left-3 rounded-xl px-4 py-3 text-sm font-bold shadow-lg" style="background: rgb(255, 255, 255); color: rgb(14, 107, 87); font-weight: 700; font-style: normal; font-size: 16px;">Warisan tulisan yang indah</div>
+       </div>
+      </div>
+      <section class="mt-10" aria-labelledby="learning-title">
+       <div class="mb-5 flex flex-wrap items-end justify-between gap-3">
+        <div>
+         <p data-template-id="section-eyebrow" class="canva-text mb-1 text-sm font-bold uppercase tracking-[0.14em]" style="color: rgb(166, 107, 22); font-weight: 700; font-style: normal; font-size: 16px;">Pilih pembelajaran</p>
+         <h2 id="learning-title" data-template-id="learning-title" class="canva-text display-font font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 24px;">Empat ruang untuk diterokai</h2>
+        </div>
+        <p data-template-id="section-help" class="canva-text text-sm" style="color: rgb(86, 115, 107); font-weight: 400; font-style: normal; font-size: 16px;">Tekan mana-mana kotak untuk mula</p>
+       </div>
+       <div class="grid gap-5 sm:grid-cols-2"><button type="button" class="nav-card text-left rounded-3xl p-6 shadow-sm" data-target="pyramid-view"> <span class="card-icon mb-5 bg-amber-100 text-amber-700"><i data-lucide="triangle" width="28" height="28"></i></span> <h3 data-template-id="card-pyramid-title" class="canva-text mb-2 font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 21px;">Piramid Hijaiyyah</h3><p data-template-id="card-pyramid-description" class="canva-text leading-6" style="color: rgb(82, 112, 103); font-weight: 400; font-style: normal; font-size: 16px;">Kenali susunan huruf hijaiyyah dalam bentuk piramid yang mudah dilihat.</p><span data-template-id="card-open-label" class="canva-text mt-5 inline-flex items-center gap-2 text-sm font-bold" style="color: rgb(166, 107, 22); font-weight: 700; font-style: normal; font-size: 16px;">Lihat piramid →</span> </button> <button type="button" class="nav-card text-left rounded-3xl p-6 shadow-sm" data-target="connected-view"> <span class="card-icon mb-5 bg-emerald-100 text-emerald-700"><i data-lucide="notebook-pen" width="27" height="27"></i></span> <h3 data-template-id="card-connected-title" class="canva-text mb-2 font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 21px;">Huruf Jawi Bersambung</h3><p data-template-id="card-connected-description" class="canva-text leading-6" style="color: rgb(82, 112, 103); font-weight: 400; font-style: normal; font-size: 16px;">Pelajari perubahan bentuk huruf apabila berada di awal, tengah dan akhir.</p><span data-template-id="card-open-label-two" class="canva-text mt-5 inline-flex items-center gap-2 text-sm font-bold" style="color: rgb(14, 107, 87); font-weight: 700; font-style: normal; font-size: 16px;">Baca nota →</span> </button> <button type="button" class="nav-card text-left rounded-3xl p-6 shadow-sm" data-target="separate-view"> <span class="card-icon mb-5 bg-sky-100 text-sky-700"><i data-lucide="git-fork" width="27" height="27"></i></span> <h3 data-template-id="card-separate-title" class="canva-text mb-2 font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 21px;">Huruf Tidak Bersambung</h3><p data-template-id="card-separate-description" class="canva-text leading-6" style="color: rgb(82, 112, 103); font-weight: 400; font-style: normal; font-size: 16px;">Fahami huruf yang tidak menyambung dengan huruf selepasnya.</p><span data-template-id="card-open-label-three" class="canva-text mt-5 inline-flex items-center gap-2 text-sm font-bold" style="color: rgb(22, 115, 154); font-weight: 700; font-style: normal; font-size: 16px;">Kenali huruf →</span> </button> <button type="button" class="nav-card text-left rounded-3xl p-6 shadow-sm" data-target="game-view"> <span class="card-icon mb-5 bg-rose-100 text-rose-700"><i data-lucide="gamepad-2" width="27" height="27"></i></span> <h3 data-template-id="card-game-title" class="canva-text mb-2 font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 21px;">Permainan Jawi</h3><p data-template-id="card-game-description" class="canva-text leading-6" style="color: rgb(82, 112, 103); font-weight: 400; font-style: normal; font-size: 16px;">Uji ingatan anda dengan memilih huruf Jawi yang betul.</p><span data-template-id="card-open-label-four" class="canva-text mt-5 inline-flex items-center gap-2 text-sm font-bold" style="color: rgb(169, 65, 86); font-weight: 700; font-style: normal; font-size: 16px;">Main sekarang →</span> </button>
+       </div>
+      </section>
+     </div>
+    </section>
+    <section id="pyramid-view" class="page-view" aria-labelledby="pyramid-title">
+     <div class="mx-auto max-w-4xl">
+      <div data-template-id="pyramid-panel" class="canva-panel rounded-[2rem] p-6 shadow-xl sm:p-10" style="background: rgb(255, 253, 248);">
+       <p data-template-id="pyramid-eyebrow" class="canva-text mb-2 text-sm font-bold uppercase tracking-[0.15em]" style="color: rgb(166, 107, 22); font-weight: 700; font-style: normal; font-size: 16px;">Kotak 1</p>
+       <h1 id="pyramid-title" data-template-id="pyramid-title" class="canva-text display-font mb-3 font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 32px;">Piramid Hijaiyyah</h1>
+       <p data-template-id="pyramid-description" class="canva-text max-w-2xl leading-7" style="color: rgb(66, 99, 91); font-weight: 400; font-style: normal; font-size: 17px;">Lihat dan sebutkan huruf dari atas ke bawah. Ulang beberapa kali supaya bentuk huruf lebih mudah diingati.</p>
+       <div class="my-9 rounded-3xl border border-amber-200 bg-amber-50/60 p-5 sm:p-8">
+        <div class="pyramid-row">
+         <span class="letter-tile arabic">ا</span>
+        </div>
+        <div class="pyramid-row">
+         <span class="letter-tile arabic">ب</span><span class="letter-tile arabic">ت</span>
+        </div>
+        <div class="pyramid-row">
+         <span class="letter-tile arabic">ث</span><span class="letter-tile arabic">ج</span><span class="letter-tile arabic">ح</span>
+        </div>
+        <div class="pyramid-row">
+         <span class="letter-tile arabic">خ</span><span class="letter-tile arabic">د</span><span class="letter-tile arabic">ذ</span><span class="letter-tile arabic">ر</span>
+        </div>
+        <div class="pyramid-row">
+         <span class="letter-tile arabic">ز</span><span class="letter-tile arabic">س</span><span class="letter-tile arabic">ش</span><span class="letter-tile arabic">ص</span><span class="letter-tile arabic">ض</span>
+        </div>
+       </div>
+       <div data-template-id="pyramid-tip" class="canva-banner rounded-2xl px-5 py-4 leading-6" style="background: rgb(228, 241, 233); color: rgb(23, 91, 73); font-weight: 600; font-style: normal; font-size: 16px;">Tip belajar: Mulakan dengan satu baris sehari. Sebut huruf dengan kuat sambil menunjuk kepada setiap kotak.</div>
+      </div>
+     </div>
+    </section>
+    <section id="connected-view" class="page-view" aria-labelledby="connected-title">
+     <div class="mx-auto max-w-5xl">
+      <div data-template-id="connected-panel" class="canva-panel rounded-[2rem] p-6 shadow-xl sm:p-10" style="background: rgb(255, 253, 248);">
+       <p data-template-id="connected-eyebrow" class="canva-text mb-2 text-sm font-bold uppercase tracking-[0.15em]" style="color: rgb(14, 107, 87); font-weight: 700; font-style: normal; font-size: 16px;">Kotak 2</p>
+       <h1 id="connected-title" data-template-id="connected-title" class="canva-text display-font mb-3 font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 32px;">Nota Huruf Jawi Bersambung</h1>
+       <p data-template-id="connected-description" class="canva-text mb-7 max-w-3xl leading-7" style="color: rgb(66, 99, 91); font-weight: 400; font-style: normal; font-size: 17px;">Sebahagian huruf Jawi berubah bentuk apabila disambungkan. Perhatikan bentuknya di kedudukan yang berbeza.</p>
+       <div class="overflow-hidden rounded-2xl border border-emerald-100 bg-white">
+        <div class="note-row bg-emerald-800 text-white"><span data-template-id="connected-head-letter" class="canva-text note-label font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Nama</span> <span data-template-id="connected-head-isolated" class="canva-text text-center font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Tunggal</span> <span data-template-id="connected-head-start" class="canva-text text-center font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Awal</span> <span data-template-id="connected-head-middle" class="canva-text text-center font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Tengah</span> <span data-template-id="connected-head-end" class="canva-text text-center font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Akhir</span>
+        </div>
+        <div class="note-row"><span data-template-id="connected-row-one-name" class="canva-text note-label font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 16px;">Ba</span> <span data-template-id="connected-row-one-isolated" class="canva-text arabic text-center" style="color: rgb(14, 107, 87); font-weight: 400; font-style: normal; font-size: 28px;">ب</span> <span data-template-id="connected-row-one-start" class="canva-text arabic text-center" style="color: rgb(14, 107, 87); font-weight: 400; font-style: normal; font-size: 28px;">بـ</span> <span data-template-id="connected-row-one-middle" class="canva-text arabic text-center" style="color: rgb(14, 107, 87); font-weight: 400; font-style: normal; font-size: 28px;">ـبـ</span> <span data-template-id="connected-row-one-end" class="canva-text arabic text-center" style="color: rgb(14, 107, 87); font-weight: 400; font-style: normal; font-size: 28px;">ـب</span>
+        </div>
+        <div class="note-row"><span data-template-id="connected-row-two-name" class="canva-text note-label font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 16px;">Sin</span> <span data-template-id="connected-row-two-isolated" class="canva-text arabic text-center" style="color: rgb(14, 107, 87); font-weight: 400; font-style: normal; font-size: 28px;">س</span> <span data-template-id="connected-row-two-start" class="canva-text arabic text-center" style="color: rgb(14, 107, 87); font-weight: 400; font-style: normal; font-size: 28px;">سـ</span> <span data-template-id="connected-row-two-middle" class="canva-text arabic text-center" style="color: rgb(14, 107, 87); font-weight: 400; font-style: normal; font-size: 28px;">ـسـ</span> <span data-template-id="connected-row-two-end" class="canva-text arabic text-center" style="color: rgb(14, 107, 87); font-weight: 400; font-style: normal; font-size: 28px;">ـس</span>
+        </div>
+        <div class="note-row"><span data-template-id="connected-row-three-name" class="canva-text note-label font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 16px;">Mim</span> <span data-template-id="connected-row-three-isolated" class="canva-text arabic text-center" style="color: rgb(14, 107, 87); font-weight: 400; font-style: normal; font-size: 28px;">م</span> <span data-template-id="connected-row-three-start" class="canva-text arabic text-center" style="color: rgb(14, 107, 87); font-weight: 400; font-style: normal; font-size: 28px;">مـ</span> <span data-template-id="connected-row-three-middle" class="canva-text arabic text-center" style="color: rgb(14, 107, 87); font-weight: 400; font-style: normal; font-size: 28px;">ـمـ</span> <span data-template-id="connected-row-three-end" class="canva-text arabic text-center" style="color: rgb(14, 107, 87); font-weight: 400; font-style: normal; font-size: 28px;">ـم</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="separate-view" class="page-view" aria-labelledby="separate-title">
+     <div class="mx-auto max-w-5xl">
+      <div data-template-id="separate-panel" class="canva-panel rounded-[2rem] p-6 shadow-xl sm:p-10" style="background: rgb(255, 253, 248);">
+       <p data-template-id="separate-eyebrow" class="canva-text mb-2 text-sm font-bold uppercase tracking-[0.15em]" style="color: rgb(22, 115, 154); font-weight: 700; font-style: normal; font-size: 16px;">Kotak 3</p>
+       <h1 id="separate-title" data-template-id="separate-title" class="canva-text display-font mb-3 font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 32px;">Huruf Tidak Bersambung</h1>
+       <p data-template-id="separate-description" class="canva-text max-w-3xl leading-7" style="color: rgb(66, 99, 91); font-weight: 400; font-style: normal; font-size: 17px;">Huruf ini boleh disambungkan dengan huruf sebelumnya, tetapi tidak boleh disambungkan kepada huruf selepasnya.</p>
+       <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <article data-template-id="separate-card-alif" class="canva-card rounded-2xl p-5 text-center shadow-sm" style="background: rgb(241, 248, 245);">
+         <p data-template-id="separate-alif-letter" class="canva-text arabic mb-2" style="color: rgb(14, 107, 87); font-weight: 400; font-style: normal; font-size: 44px;">ا</p>
+         <h2 data-template-id="separate-alif-name" class="canva-text mb-2 font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 24px;">Alif</h2>
+         <p data-template-id="separate-alif-note" class="canva-text text-sm leading-6" style="color: rgb(85, 115, 107); font-weight: 400; font-style: normal; font-size: 16px;">Tidak menyambung ke huruf selepasnya.</p>
+        </article>
+        <article data-template-id="separate-card-dal" class="canva-card rounded-2xl p-5 text-center shadow-sm" style="background: rgb(238, 247, 250);">
+         <p data-template-id="separate-dal-letter" class="canva-text arabic mb-2" style="color: rgb(22, 115, 154); font-weight: 400; font-style: normal; font-size: 44px;">د</p>
+         <h2 data-template-id="separate-dal-name" class="canva-text mb-2 font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 24px;">Dal</h2>
+         <p data-template-id="separate-dal-note" class="canva-text text-sm leading-6" style="color: rgb(85, 115, 107); font-weight: 400; font-style: normal; font-size: 16px;">Berhenti sambungan selepas huruf ini.</p>
+        </article>
+        <article data-template-id="separate-card-ra" class="canva-card rounded-2xl p-5 text-center shadow-sm" style="background: rgb(255, 245, 232);">
+         <p data-template-id="separate-ra-letter" class="canva-text arabic mb-2" style="color: rgb(166, 107, 22); font-weight: 400; font-style: normal; font-size: 44px;">ر</p>
+         <h2 data-template-id="separate-ra-name" class="canva-text mb-2 font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 24px;">Ra</h2>
+         <p data-template-id="separate-ra-note" class="canva-text text-sm leading-6" style="color: rgb(85, 115, 107); font-weight: 400; font-style: normal; font-size: 16px;">Bentuknya kekal terpisah di sebelah kiri.</p>
+        </article>
+        <article data-template-id="separate-card-wau" class="canva-card rounded-2xl p-5 text-center shadow-sm" style="background: rgb(251, 239, 241);">
+         <p data-template-id="separate-wau-letter" class="canva-text arabic mb-2" style="color: rgb(169, 65, 86); font-weight: 400; font-style: normal; font-size: 44px;">و</p>
+         <h2 data-template-id="separate-wau-name" class="canva-text mb-2 font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 24px;">Wau</h2>
+         <p data-template-id="separate-wau-note" class="canva-text text-sm leading-6" style="color: rgb(85, 115, 107); font-weight: 400; font-style: normal; font-size: 16px;">Tidak boleh bersambung dengan huruf seterusnya.</p>
+        </article>
+       </div>
+       <div data-template-id="separate-tip" class="canva-banner mt-7 rounded-2xl px-5 py-4 leading-6" style="background: rgb(233, 243, 248); color: rgb(23, 97, 125); font-weight: 600; font-style: normal; font-size: 16px;">Ingat mudah: Alif, Dal, Zal, Ra, Zai dan Wau tidak menyambung ke huruf selepasnya.</div>
+      </div>
+     </div>
+    </section>
+    <section id="game-view" class="page-view" aria-labelledby="game-title">
+     <div class="mx-auto max-w-3xl">
+      <div data-template-id="game-panel" class="canva-panel rounded-[2rem] p-6 text-center shadow-xl sm:p-10" style="background: rgb(255, 253, 248);">
+       <p data-template-id="game-eyebrow" class="canva-text mb-2 text-sm font-bold uppercase tracking-[0.15em]" style="color: rgb(169, 65, 86); font-weight: 700; font-style: normal; font-size: 16px;">Kotak 4</p>
+       <h1 id="game-title" data-template-id="game-title" class="canva-text display-font mb-3 font-bold" style="color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 32px;">Permainan Jawi</h1>
+       <p data-template-id="game-description" class="canva-text mx-auto max-w-xl leading-7" style="color: rgb(66, 99, 91); font-weight: 400; font-style: normal; font-size: 17px;">Pilih huruf yang sepadan dengan nama yang diberikan. Jawab dengan tenang dan cuba lagi jika perlu.</p>
+       <div class="my-8 rounded-3xl border border-amber-200 bg-amber-50 p-7">
+        <p data-template-id="game-question-label" class="canva-text mb-3 font-bold" style="color: rgb(121, 82, 19); font-weight: 700; font-style: normal; font-size: 16px;">Manakah huruf Jawi bagi “Ba”?</p>
+        <p data-template-id="game-letter" class="canva-text arabic font-bold" style="color: rgb(14, 107, 87); font-weight: 400; font-style: normal; font-size: 64px;">ب</p>
+       </div>
+       <div class="grid gap-3 sm:grid-cols-3" role="group" aria-label="Pilihan jawapan"><button type="button" class="answer-button arabic" data-answer="wrong" data-template-id="answer-one" style="background: rgb(255, 253, 248); color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 28px;">ت</button> <button type="button" class="answer-button arabic" data-answer="correct" data-template-id="answer-two" style="background: rgb(255, 253, 248); color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 28px;">ب</button> <button type="button" class="answer-button arabic" data-answer="wrong" data-template-id="answer-three" style="background: rgb(255, 253, 248); color: rgb(23, 59, 53); font-weight: 700; font-style: normal; font-size: 28px;">ن</button>
+       </div>
+       <p id="game-feedback" class="status-message mt-5 text-sm font-bold" aria-live="polite"></p><button id="retry-button" type="button" data-template-id="retry-button" class="retry-button canva-button mt-4 hidden rounded-xl px-5 py-3 font-bold transition hover:brightness-95" style="background: rgb(14, 107, 87); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Cuba Semula</button>
+      </div>
+     </div>
+    </section>
+   </main>
+   <footer class="relative z-10 w-full px-5 pb-7 text-center sm:px-8">
+    <p data-template-id="footer-text" class="canva-text text-sm" style="color: rgb(86, 115, 107); font-weight: 400; font-style: normal; font-size: 16px;">Pembelajaran Jawi • Belajar sedikit demi sedikit, setiap hari.</p>
+   </footer>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      lucide.createIcons();
+
+      const views = document.querySelectorAll(".page-view");
+      const backButton = document.getElementById("back-button");
+      const brandHome = document.getElementById("brand-home");
+      const homeView = document.getElementById("home-view");
+
+      function showView(viewId) {
+        views.forEach(function (view) {
+          view.classList.toggle("is-active", view.id === viewId);
+        });
+
+        const isHome = viewId === "home-view";
+        backButton.classList.toggle("hidden", isHome);
+        backButton.classList.toggle("inline-flex", !isHome);
+
+        if (!isHome) {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }
+
+      document.querySelectorAll("[data-target]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          showView(button.dataset.target);
+        });
+      });
+
+      backButton.addEventListener("click", function () {
+        showView("home-view");
+      });
+
+      brandHome.addEventListener("click", function () {
+        showView("home-view");
+      });
+
+      const feedback = document.getElementById("game-feedback");
+      const retryButton = document.getElementById("retry-button");
+      const answers = document.querySelectorAll(".answer-button");
+
+      answers.forEach(function (answer) {
+        answer.addEventListener("click", function () {
+          if (document.querySelector(".answer-button:disabled")) return;
+
+          answers.forEach(function (item) {
+            item.disabled = true;
+          });
+
+          if (answer.dataset.answer === "correct") {
+            answer.classList.add("is-correct");
+            feedback.textContent = "Hebat! Ini ialah huruf ب (ba).";
+            feedback.className = "status-message mt-5 text-sm font-bold text-emerald-700";
+          } else {
+            answer.classList.add("is-wrong");
+            document.querySelector('[data-answer="correct"]').classList.add("is-correct");
+            feedback.textContent = "Belum tepat. Jawapan yang betul ialah ب (ba).";
+            feedback.className = "status-message mt-5 text-sm font-bold text-rose-700";
+          }
+
+          retryButton.classList.remove("hidden");
+        });
+      });
+
+      retryButton.addEventListener("click", function () {
+        answers.forEach(function (answer) {
+          answer.disabled = false;
+          answer.classList.remove("is-correct", "is-wrong");
+        });
+
+        feedback.textContent = "";
+        feedback.className = "status-message mt-5 text-sm font-bold";
+        retryButton.classList.add("hidden");
+      });
+    });
+  </script>
+ 
+</body></html>
